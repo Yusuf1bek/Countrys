@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/logo.svg">
+    <link rel="stylesheet" href="main.css">
     <title>Country List</title>
     <style type="text/tailwindcss">
         @layer utilities {
@@ -11,10 +12,10 @@
                 content-visibility: auto;
             }
         }
-    </style>
+        </style>
 </head>
 <body>
-    <header class="px-5 py-5 shadow-lg bg-white flex items-center justify-between px-5 mb-[20px]">
+    <header class=" shadow-inner px-5 py-5 shadow-lg bg-white flex items-center justify-between px-5 mb-[20px]">
         <h1 class="font-bold text-xl">Country List</h1>
         <div class="flex items-center gap-5">
             <button class="w-[50px] h-[50px] flex items-center text-[16px] rounded-[50%] border-[1px] border-red-700 px-4 py-5">
@@ -25,8 +26,8 @@
                 <img src="./images/saved.svg" alt="Like img" width="30" height="30">
                 <span>(0)</span>
             </button>
-            <button class="w-[50px] h-[50px] flex items-center text-[16px] rounded-[50%] border-[1px] border-black">
-                <img class="ml-[15px]" src="./images/mode.svg" alt="Like img" width="20" height="20">
+            <button id="darkModeToggle" class=" btn px-3 [50px] h-[50px] flex items-center text-[16px] rounded-[50%] border-[1px] border-black">
+                🌓
             </button>
         </div>
     </header>
@@ -35,10 +36,9 @@
             <div class="flex px-5 justify-between w-[1465px] ">
                 <input class="hero-input w-[200px] py-3 border-black border-[1px] rounded-lg px-4" type="text" placeholder="Searching"> 
                  <select class="w-[280px] py-3 border-black border-[1px] rounded-lg px-3" type="text" name="All" id=""> <option>All</option>
-                    <option>Country</option><option>Capital</option> <option>Population</option> <option>Id</option>
                 </select>
             </div>
-            <ul class="country-list flex flex-wrap justify-between gap-5 mt-[20px] px-3 py-3">
+            <ul class="country-list flex flex-wrap justify-between gap-5 mt-[20px] px-10 py-3">
             </ul>
         </section>
     </main>

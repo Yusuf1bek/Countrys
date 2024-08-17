@@ -1,0 +1,31 @@
+:root{
+    --dark_bg: white;
+    --color_text: white;
+    --nav_bg: white;
+    --h1: black;
+    --border: black;
+}
+.dark_bg{
+    --dark_bg: black;
+    --color_text: white;
+    --nav_bg:black;
+    --h1: white;
+    --border: white;
+    transition: all ease-in-out 2.5s;
+}
+header{
+    background-color: var(--nav_bg) !important;
+    transition: all ease-in-out 2.5s;
+}
+body{
+    background-color: var(--dark_bg);
+    transition: all ease-in-out 2.5s;
+}
+header h1{
+    color: var(--h1);
+    transition: all ease-in-out 2.5s;
+}
+.btn{
+    border-color: var(--border);
+    transition: all ease-in-out 2.5s;
+}

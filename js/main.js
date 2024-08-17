@@ -75,7 +75,7 @@ function renderCountries(arr) {
     elMainList.innerHTML = null;
     arr.map(item => {
         let cardItem = document.createElement("li");
-        cardItem.className = " w-[300px] p-3 bg-slate-300 rounded-lg";
+        cardItem.className = " w-[300px] p-5 bg-slate-300 rounded-lg hover:w-[350px] transition-all";
         cardItem.innerHTML = `
             <img src=${item.flag} alt="Flag" width="100%" height="200"/>
             <h2> ${item.name}</h2>
@@ -116,3 +116,10 @@ elSearchInput.addEventListener("keyup", function(evt) {
     const filteredUsers = countrys.filter(item => item.name.toLowerCase().includes(searachValue));
     renderCountries(filteredUsers);
 }); 
+
+const darkModeToggle = document.getElementById('darkModeToggle');
+const bodyElement = document.body;
+
+darkModeToggle.addEventListener('click', () => {
+    bodyElement.classList.toggle('dark_bg');
+});
