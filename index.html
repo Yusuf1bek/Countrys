@@ -18,13 +18,13 @@
     <header class=" shadow-inner px-5 py-5 shadow-lg bg-white flex items-center justify-between px-5 mb-[20px]">
         <h1 class="font-bold text-xl">Country List</h1>
         <div class="flex items-center gap-5">
-            <button class="w-[50px] h-[50px] flex items-center text-[16px] rounded-[50%] border-[1px] border-red-700 px-4 py-5">
+            <button onclick="handleLikeCountBtn()" class="w-[50px] h-[50px] flex items-center text-[16px] rounded-[50%] border-[1px] border-red-700 px-4 py-2">
                 <img src="./images/likes.svg" alt="Like img" width="20" height="20">
-                <span>(0)</span>
+                <span class="like-count">(0)</span>
             </button>
-            <button class="w-[50px] h-[50px] flex items-center text-[16px] rounded-[50%] border-[1px] border-green-500">
-                <img src="./images/saved.svg" alt="Like img" width="30" height="30">
-                <span>(0)</span>
+            <button onclick="handleSaveCountBtn()" class="w-[50px] h-[50px] flex items-center text-[16px] rounded-[50%] border-[1px] border-green-500">
+                <img src="./images/svg_basket.svg" alt="Like img" width="30" height="30">
+                <span class="save-count">(0)</span>
             </button>
             <button id="darkModeToggle" class=" btn px-3 [50px] h-[50px] flex items-center text-[16px] rounded-[50%] border-[1px] border-black">
                 🌓
@@ -33,15 +33,21 @@
     </header>
     <main>
         <section>
-            <div class="flex px-5 justify-between w-[1465px] ">
+            <div class="flex px-5 justify-between">
                 <input class="hero-input w-[200px] py-3 border-black border-[1px] rounded-lg px-4" type="text" placeholder="Searching"> 
-                 <select class="w-[280px] py-3 border-black border-[1px] rounded-lg px-3" type="text" name="All" id=""> <option>All</option>
+                 <select class="country-select w-[280px] py-3 border-black border-[1px] rounded-lg px-3" type="text" name="All" id=""> <option>All</option>
                 </select>
             </div>
             <ul class="country-list flex flex-wrap justify-between gap-5 mt-[20px] px-10 py-3">
             </ul>
         </section>
     </main>
+    <div id="wrapper" class="modal-wrappper fixed top-0 bottom-0 left-0 right-0 backdrop-blur duration-300 scale-0">
+        <div class=" modal-inner w-[350px] h-[350px] top-0 bottom-0 left-0 right-0 m-auto mt-[145px] bg-zinc-300 shadow-xl rounded-xl">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
     <script src="./js/main.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
